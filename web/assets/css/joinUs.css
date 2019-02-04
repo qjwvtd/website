@@ -1,0 +1,89 @@
+.homeSeventeenLow{
+    background: #23252A;
+}
+.homeSeventeenLow>.textBackground{
+    text-align: left !important;
+    padding-left: 100px;
+    color: #41434c;
+}
+.joinUsContent{
+    position: absolute;
+    width: 61.8%;
+    min-height: 528px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.joinUsContent>div.joinLayout{
+    width: calc((100% - 50px)/3);
+    float: left;
+}
+.joinUsContent>div.joinLayout:first-child{
+    margin-left: 50px;
+}
+.joinLayout>div{
+    position: relative;
+}
+.joinLayout>div.companyEnvironment{
+    margin-top: 0px;
+}
+.joinLayout>div.companyCulture{
+    margin-top: 80px;
+}
+.joinLayout>div.companyPosition{
+    margin-top: 30px;
+}
+.joinLayout>div>section{
+    width: 0;
+    height: 20px;
+    background: #FF5B00;
+}
+.joinLayout>div>img{
+    width: 100%;
+}
+.joinLayout>div>div.joinUsMask{
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    height: calc(100% - 20px);
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+}
+.joinLayout:hover div>section{
+    width: 50%;
+    animation: redLineChange 0.5s;
+}
+.joinLayout:hover div>div.joinUsMask{
+    background: rgba(0,0,0,0);
+    animation: maskBackgroundChange 1s;
+}
+.joinLayout:hover div>div.joinUsMask>p{
+    color: #FF5B00;
+}
+.joinLayout:hover div>div.joinUsMask>a{
+    color: #FF5B00;
+}
+.joinUsMask>p,.joinUsMask>a{
+    font-family: CenturyGothic-Bold;
+    font-size: 2.4em;
+    color: #fff;
+    font-weight: bold;
+}
+.joinUsMask>p{
+    margin-top: 60%;
+    margin-left: -20px;
+}
+.joinUsMask>a{
+    margin-left: 1em;
+}
+/*红色横线动画*/
+@keyframes redLineChange {
+    0%{width: 0;}
+    100%{width: 50%;}
+}
+/*蒙板背景色*/
+@keyframes maskBackgroundChange {
+    0%{background: rgba(0,0,0,0.8);}
+    100%{background: rgba(0,0,0,0);}
+}

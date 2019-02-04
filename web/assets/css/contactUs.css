@@ -1,0 +1,59 @@
+.homeFiveteenLow {
+    background: #fff;
+}
+
+.homeFiveteenLow .textBackground {
+    color: #F0F2F7 !important;
+    top: 15% !important;
+}
+
+.contactsUsOne{
+    padding-top: 15em;
+}
+.contactsUsOne>div.contactTitle{
+    width: 61.8%;
+    margin: 0 auto;
+    font-family: CenturyGothic-Bold;
+    font-size: 4.8em;
+    font-weight: bold;
+    color: #1D2026;
+}
+.contactsUsOne>div.contactContext{
+    width: 56%;
+    padding-top: 8em;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contactsUsOne>div.contactContext>div{
+    float: left;
+    width: 100%;
+}
+.contactsUsOne>div.contactContext>div>span{
+    display: block;
+}
+.contactsUsOne>div.contactContext>div>span:first-child{
+    font-family: CenturyGothic;
+    font-size: 2.4em;
+    font-weight: Regular;
+    color: #C5C7CB;
+}
+.contactsUsOne>div.contactContext>div>span:last-child{
+    font-family: Gotham-Bold;
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #23252A;
+}
+.contactContext>.contactStartBtn{
+    display: inline-block;
+    margin: 4em auto auto auto;
+    padding: 1em 4em;
+    font-family: CenturyGothic-Bold;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    background: #FF5B00;
+    cursor: pointer;
+}
+.contactContext>.contactStartBtn:hover{
+    opacity: 0.8;
+}

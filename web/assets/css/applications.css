@@ -1,0 +1,55 @@
+.homeEightLow{
+    background: #fff !important;
+}
+.homeEightLow .textBackground{
+    color: #F0F2F7 !important;
+    text-align: right;
+}
+.mobileMovie,.mobileText{
+    position: absolute;
+}
+.mobileMovie{
+    z-index: 1;
+    width: 27%;
+    height: 69%;
+    left: 20%;
+    background: url("./../images/applications/applications.png") no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    animation: applicationImgChange 5.8s linear infinite;
+}
+.mobileText{
+    z-index: 2;
+    bottom: 10%;
+    width: 74%;
+    left: 13%;
+}
+.mobileText>div:first-child{
+    font-size: 13.6em;
+    font-family: CenturyGothic-Bold;
+    color: #292B30;
+    font-weight: bold;
+}
+.mobileText>div:last-child{
+    overflow: hidden;
+    max-height: 260px;
+    animation: textShowChange 2s;
+}
+.mobileText>div:last-child>p{
+    font-size: 2.8em;
+    line-height: 2;
+    font-family: CenturyGothic-Bold;
+    color: #1D2026;
+    font-weight: bold;
+}
+@keyframes applicationImgChange {
+    /*图片动画*/
+    0%{top: 0;margin-left: 0px;transform: scale3d(1, 1, 1) skewY(0deg)}
+    50%{top: 10px;margin-left: 10px;transform: scale3d(0.9, 1, 1.1) skewY(0.05deg)}
+    100%{top: 0px;margin-left: 0px;transform: scale3d(1, 1, 1) skewY(0deg)}
+}
+@keyframes textShowChange {
+    /*详细文字动画*/
+    0%{max-height: 0px}
+    100%{max-height: 260px}
+}

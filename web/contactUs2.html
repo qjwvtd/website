@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile CPX produce innovation</title>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/iconfont.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/contactUs2.css">
+</head>
+<body>
+<!--头部-->
+<div class="ui-header">
+    <a class="ui-logo-black" href="index.html"></a>
+    <ul class="ui-more">
+        <li id="contact" class="contactBlack"><a href="home.html#contactUs">Contact</a></li>
+        <li id="openNav" class="navBlackIcon"><i class="iconfont icon-nav"></i><span></span></li>
+    </ul>
+    <div id="nav" class="ui-nav">
+        <div class="ui-nav-cover"></div>
+        <div class="ui-nav-close"><span>✕</span></div>
+        <ul class="ui-nav-content">
+            <li><a href="home.html#home1">About Us.</a></li>
+            <li><a href="home.html#pre">PRE.</a></li>
+            <li><a href="home.html#clawin1">Clawin.</a></li>
+            <li><a href="home.html#business">Our Partners.</a></li>
+            <li><a href="home.html#joinUs">Join Us.</a></li>
+            <li><a href="home.html#contactUs">Contact Us.</a></li>
+        </ul>
+        <div>
+            <p class="ui-address">CPIC financial tower D-11,</p>
+            <p class="ui-address">No.199 Tianfu Third Street, </p>
+            <p class="ui-address">High-Tech Zone,</p>
+            <p class="ui-address">Chengu, China <i class="iconfont icon-dizhi-01"></i></p>
+            <p class="ui-sends">support@mobilecpx.com</p>
+        </div>
+    </div>
+</div>
+<!--尾部-->
+<!--<div class="ui-footer">-->
+    <!--<a class="iconfont icon-facebook"></a>-->
+    <!--<a class="iconfont icon-twitter"></a>-->
+<!--</div>-->
+<div class="ui-body">
+    <div class="ui-layer-low homeSixteenLow">
+        <div class="textBackground">Say Hello</div>
+        <div class="longLine2"><span></span><span></span><span></span></div>
+    </div>
+    <div class="ui-layer-high">
+        <div class="ui-content">
+            <div id="showYourName"  class="contactsUsTwo">
+                <div class="contactTitle">Do you have an interesting idea?<br>Let's talk about it!</div>
+                <div class="contactContext">
+                    <p>Fill in the form, or, if you prefer, <a href="mailto:hello@mobilecpx.com">send us an email</a></p>
+                    <textarea class="sendIdea" v-model="idea" v-on:change="setIdeaVal" placeholder="Write down your ideas."></textarea>
+                    <!--<input type="text" placeholder="Leave your name." />-->
+                    <!--<input type="text" placeholder="Your Email or phone number." />-->
+                </div>
+                <button class="contackSendBtn" v-on:click="sendMyContent">SEND</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./src/lib/vue.min.js"></script>
+<script type="text/javascript" src="src/public/common.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#showYourName',
+        data: {
+            idea: ''
+        },
+        methods:{
+            sendMyContent:function (e) {
+                var event = window.event || e.event;
+                var target = event.target || event.srcElement;
+                if(this.idea.length == 0){
+                    message.error('idea is null!');
+                    return;
+                }
+                message.success('send success!');
+                target.disabled = 'disabled';
+                setTimeout(function () {
+                    target.disabled = false;
+                },10000);
+            },
+            setIdeaVal:function (e) {
+                var event = e || window.event;
+                var target = event.target || event.srcElement;
+                this.idea = target.value;
+            }
+        }
+    })
+</script>
+</body>
+</html>

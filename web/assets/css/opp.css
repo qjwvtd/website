@@ -1,0 +1,57 @@
+.paymentContent{
+    height: 68%;
+    margin-top: 8%;
+}
+.paymentContent>div{
+    height: 33.3333%;
+    text-align: center;
+}
+.paymentContent>div.payItemOne{
+    text-align: center;
+    font-family: CenturyGothic-Bold;
+    color: #292B30;
+    font-weight: bold;
+    font-size: 8em;
+    width: 100%;
+    position: relative;
+}
+.paymentContent>div.payItemOne>div{
+    position: absolute;
+    z-index: 2;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #fff;
+    animation: showTextChange 2s;
+}
+.paymentContent>div>a{
+    cursor: pointer;
+}
+.paymentContent>div>a>img{
+    width: 18%;
+}
+.paymentContent>div>a>img:hover{
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+}
+@keyframes showTextChange {
+    /*遮罩渐显动画*/
+    0%{width: 100%}
+    100%{width: 0%}
+}
+@keyframes shake {
+    /*抖动动画*/
+    10%, 90% {
+        transform: translate3d(-2px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(4px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-8px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(8px, 0, 0);
+    }
+}

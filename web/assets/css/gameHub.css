@@ -1,0 +1,104 @@
+.homeNineLow{
+    background: #fff !important;
+}
+.homeNineLow .textBackground{
+    color: #F0F2F7 !important;
+    text-align: left;
+    padding-top: 1.2em;
+    padding-left: 0.5em;
+}
+
+.gameImages{
+    width: 93%;
+    margin-left: 7%;
+    margin-top: 7em;
+}
+.gameImages ul{
+    list-style: none;
+    overflow: hidden;
+}
+.gameImages ul li{
+    float: left;
+    width: 23.25%;
+    height: auto;
+}
+.gameImages ul li.gameOne{
+    margin-left: 0;
+}
+.gameImages ul li.gameTwo{
+    margin-left: 4%;
+}
+.gameImages ul li.gameThree{
+    margin-left: 2%;
+}
+.gameImages ul li.gameFour{
+    margin-left: 1%;
+}
+.gameImages ul li>a{
+    display: block;
+    width: 100%;
+    transform: rotate(0deg);
+    animation: imgRatateChange 0.5s;
+}
+.gameImages ul li>a>img{
+    width: 100%;
+}
+.gameImages ul li>div{
+    width: 60px;
+    height: 5px;
+    background: #828795;
+    margin: 20px 0 10px 0;
+    animation: itemLineChange 1s;
+}
+.gameImages ul li>span{
+    font-family: Gotham-Bold;
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #23252A;
+}
+.gameTexts{
+    margin-top: 1.4em;
+    width: 86%;
+    margin-left: 7%;
+}
+.gameTexts>div:first-child{
+    font-family: CenturyGothic-Bold;
+    font-size: 4.8em;
+    font-weight: bold;
+    color: #292B30;
+    animation: titleChange 1s;
+}
+.gameTexts>div:last-child{
+    max-height: 200px;
+    overflow: hidden;
+    animation: testsChange 1.5s;
+}
+.gameTexts>div:last-child>p{
+    font-family: CenturyGothic-Bold;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #3E4148;
+}
+/*图片2d旋转*/
+@keyframes imgRatateChange {
+    0%{transform: rotate(15deg);}
+    100%{transform: rotate(0deg);}
+}
+/*小横线动画*/
+@keyframes itemLineChange {
+    0%{width: 0px;}
+    50%{width: 0px;}
+    100%{width: 60px;}
+}
+/*标题动画*/
+@keyframes titleChange {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*文字动画*/
+@keyframes testsChange {
+    0%{max-height: 0px;}
+    75%{max-height: 0px;}
+    100%{max-height: 200px;}
+}

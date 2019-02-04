@@ -1,0 +1,275 @@
+/**首页向导**/
+.guide{
+    position: absolute;
+    z-index: 999;
+    width: 160px;
+    height: 60px;
+    border-radius: 60px 60px 0 0;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    background:url("./../images/xia.svg") no-repeat center;
+    background-size: 30px 30px;
+    animation: guideChange 1s linear infinite;
+}
+.guide.noStream{
+    background:transparent;
+}
+@keyframes guideChange {
+    25%{bottom: 0}
+    75%{bottom: 10px}
+}
+/*#################################home1的css 华丽的分界线#############################*/
+.homeOneLow{
+    background:url("./../images/homeOneBg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.homeOneLow .longLine > span {
+    background: rgba(108, 114, 127, 0.4) !important;
+}
+.homeText,.homeCount{
+    position: absolute;
+}
+.homeText{
+    z-index: 1;
+    min-width: 64%;
+    max-width: 90%;
+    padding: 50px 60px;
+    background: rgba(22,22,24,0.4);
+    opacity: 1;
+    top: 18%;
+    -webkit-animation: blackChangeAnimation 1s;
+    -o-animation: blackChangeAnimation 1s;
+    animation: blackChangeAnimation 1s;
+}
+.homeText>p{
+    font-family: Avenir;
+    font-weight: bold;
+    color: #F2F5FC;
+    font-size: 3.2em;
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .homeText>p{
+        font-size: 2.4em;
+    }
+}
+.homeText>p>a{
+    overflow: hidden;
+    position: relative;
+}
+.homeText>p>a>span{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom:10px solid #FF5B00;
+    animation: xiahulineAnimation 2s;
+}
+.homeCount{
+    z-index: 2;
+    top:50%;
+    left:42%;
+    opacity: 1;
+    animation: showCountAnimation 2s;
+}
+.homeCount>ul{
+    overflow: hidden;
+}
+.homeCount>ul>li{
+    float:left;
+}
+.homeCount>ul>li:last-child{
+    margin-left: 100px;
+}
+.homeCount>ul>li>span:first-child{
+    font-family: Avenir;
+    font-weight: bold;
+    color: #F5F5FD;
+    font-size: 13.2em;
+}
+.homeCount>ul>li>span:last-child{
+    font-family: Avenir;
+    font-weight: bold;
+    color: #FF5B00;
+    font-size: 3.2em;
+}
+@keyframes blackChangeAnimation {
+    /*黑色文字区域*/
+    0%{background: rgba(22,22,24,0);opacity: 0;top: 0;}
+    70%{background: rgba(22,22,24,0.1);top: 15%;}
+    80%{background: rgba(22,22,24,0.2);top: 16%;}
+    90%{background: rgba(22,22,24,0.3);top: 17%;}
+    100%{background: rgba(22,22,24,0.4);opacity: 1;top: 18%;}
+}
+@keyframes xiahulineAnimation {
+    /*橙色下划线*/
+    0%{width: 0px}
+    0%{width: 0px}
+    0%{width: 0px}
+    50%{width: 0px}
+    100%{width: 100%}
+}
+@keyframes showCountAnimation {
+    /*显示统计*/
+    0%{opacity: 0;}
+    50%{opacity: 0;top:60%;}
+    100%{opacity: 1;top:50%;}
+}
+/*#################################home2的css 华丽的分界线#############################*/
+.homeTwoLow{
+    background: #23252A;
+}
+
+.homeTwoLow .textBackground{
+    color: #26292E;
+    font-size: 15em !important;
+}
+.imgAreaOne{
+    position: absolute;
+    height: 80%;
+    top: 20%;
+    width: 65%;
+}
+.imgAreaOne a{
+    border: 1px solid transparent;
+    position: absolute;
+    width: 33.3333%;
+    left: 100px;
+}
+.imgAreaOne .home2AreaImgRight{
+    left: 50%;
+}
+.imgAreaOne img{
+    width: 100%;
+    border: 1px solid transparent;
+    /*-webkit-animation: imgGrounpChange 0.6s linear;*/
+    /*-o-animation: imgGrounpChange 0.6s linear;*/
+    /*animation: imgGrounpChange 0.6s linear;*/
+    /*transform:rotate(0deg);*/
+}
+.imgAreaOne a:hover{
+    border: 1px solid #fff;
+    animation: homeTowASkew 1s linear;
+}
+.imgAreaOne a:hover img{
+    animation: homeTowImgSkew 1.5s linear;
+}
+@keyframes homeTowASkew {
+    33.3333%{transform: rotate3d(1, 0.8, 1.8, -15deg) skew(-3deg,-1deg);}
+    66.6666%{transform: rotate3d(1, 1, 2, 0deg) skew(3deg,1deg);}
+}
+@keyframes homeTowImgSkew {
+    33.3333%{transform: rotate3d(1, 1, 2, 10deg) skew(4deg,2deg) scale(0.8);}
+    66.6666%{transform: rotate3d(1, 1, 2, -10deg) skew(-4deg,-2deg) scale(0.9);}
+}
+.imgAreaOne>div{
+    position: absolute;
+    bottom: 2em;
+    font-family: Avenir;
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #F2F5FC;
+    margin-left: 100px;
+    overflow: hidden;
+    animation: textsChange 1.5s;
+}
+.imgAreaTwo{
+    position: absolute;
+    z-index: -1;
+    width: 33.33%;
+    top:0;
+    right:0;
+    bottom: 0;
+    -webkit-animation: imgItemChange 1s;
+    -o-animation: imgItemChange 1s;
+    animation: imgItemChange 1s;
+}
+.imgAreaTwo img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes imgItemChange {
+    /*第三张图片动画*/
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+@keyframes textsChange {
+    /*文字动画*/
+    0%{max-height:0px;}
+    40%{max-height:0px;}
+    100%{max-height:300px;}
+}
+
+/*#################################home3的css 华丽的分界线#############################*/
+.homeThreeLow{
+    background: #23252A;
+}
+.homeThreeLow .textBackground{
+    top: 0 !important;
+    height: 100%;
+    width: 80%;
+    left: 10%;
+    overflow: hidden;
+}
+.homeThreeLow .textBackground>.backgroundScroll{
+    position: relative;
+    width: 200%;
+    height: 50%;
+    top: 50%;
+    overflow: hidden;
+    animation: bottomBgMove 24s 1.5s linear infinite
+}
+.homeThreeLow .textBackground>.backgroundScroll>div{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url("../images/home/x-star.jpg") no-repeat center bottom;
+    background-size: 100% 50%;
+}
+/*底图左右移动*/
+@keyframes bottomBgMove {
+    0% {-webkit-transform:translate(0%);}
+    100% {-webkit-transform:translate(-50%);}
+}
+.xProduct,.xImg,.xText{
+    position: absolute;
+}
+.xProduct{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: url("./../images/home/x-product.png") no-repeat center bottom;
+    background-size: 82% 80%;
+}
+.xImg{
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: transparent url("./../images/home/x-img.jpg") no-repeat center center;
+    background-size: 61.8% 61.8%;
+    animation: bannerBgMove 1.5s linear;
+}
+/*页图动画*/
+@keyframes bannerBgMove {
+    0% {background-size: 100% 100%;opacity: 0}
+    100% {background-size: 61.8% 61.8%;opacity: 1}
+}
+.xText{
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.xText>p{
+    display: inline-block;
+    font-size: 3.2em;
+    color: #F2F5FC;
+    margin: 15em auto auto 8em;
+    animation: xTextChange 2s linear;
+}
+@keyframes xTextChange {
+    0% {opacity: 0}
+    75% {opacity: 0}
+    100% {opacity: 1}
+}

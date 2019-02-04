@@ -1,0 +1,67 @@
+.homeNineteenLow {
+    background: #fff;
+}
+
+.homeNineteenLow .textBackground {
+    color: #F0F2F7 !important;
+    top: 10% !important;
+}
+.jobDetail{
+    width: 61.8%;
+    margin: 10em auto auto auto;
+}
+.jobDetail>ul{
+    width: 100%;
+    list-style: none;
+    margin: 20px auto 0 0;
+    overflow: hidden;
+}
+.jobDetail>ul>li{
+    width: 33.3333%;
+    padding-top: 10px;
+    float: left;
+    font-family: Avenir-Black;
+    font-weight: Black;
+    font-size: 3.2em;
+    color: #1D2026;
+}
+.jobDetail>ul>li>a{
+    position: relative;
+}
+.jobDetail>ul>li>a>span{
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    left: 0;
+    bottom: 2px;
+    border-bottom: 10px solid #FF7815;
+}
+.jobDetail>ul>li>a:hover span,.jobDetail>ul>li.active>a>span{
+    width: 100%;
+    animation: redLineChange 0.5s;
+}
+.jobDescription{
+    background: #fff;
+    padding: 50px 90px;
+    margin-top: 40px;
+    box-shadow: 0 0 30px 3px rgba(204, 204, 204, 0.49);
+    max-height: 400px;
+    overflow: scroll;
+}
+.jobDescription>h3{
+    font-family: CenturyGothic-Bold;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #1D2026;
+}
+.jobDescription>.jobTexts{
+    font-family: CenturyGothic;
+    font-size: 2.2em;
+    font-weight: Regular;
+    color: rgba(29, 32, 38, 0.65);
+}
+/*红色横线动画*/
+@keyframes redLineChange {
+    0%{width: 0;}
+    100%{width: 100%;}
+}

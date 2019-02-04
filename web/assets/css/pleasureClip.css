@@ -1,0 +1,53 @@
+.homeFiveLow{
+    background: #23252A;
+}
+.homeFiveLow .textBackground{
+    color: #41434c;
+}
+.mobileMovie,.mobileText{
+    position: absolute;
+}
+.mobileMovie{
+    /*border: 1px solid red;*/
+    z-index: 1;
+    width: 36%;
+    height: 86%;
+    left: 23%;
+    background: url("./../images/pleasureClip/mobileImg.png") no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    animation: pleasureClipImgChange 5.8s linear infinite;
+}
+.mobileText{
+    z-index: 2;
+    bottom: 10%;
+    width: 74%;
+    left: 13%;
+    animation: textShowChange 2s;
+}
+.mobileText>div:first-child{
+    font-size: 8.6em;
+    font-family: CenturyGothic-Bold;
+    color: #fff;
+    font-weight: bold;
+    text-align: right;
+}
+.mobileText>div:last-child>p{
+    font-size: 2.2em;
+    line-height: 2;
+    font-family: CenturyGothic-Bold;
+    color: #F2F5FC;
+    font-weight: bold;
+}
+@keyframes pleasureClipImgChange {
+    /*图片动画*/
+    0%{top: 0;margin-left: 0px;transform: scale3d(1, 1, 1) skewY(0deg)}
+    50%{top: 10px;margin-left: 10px;transform: scale3d(0.9, 1, 1.1) skewY(0.05deg)}
+    100%{top: 0px;margin-left: 0px;transform: scale3d(1, 1, 1) skewY(0deg)}
+}
+@keyframes textShowChange {
+    /*详细文字动画*/
+    0%{bottom: 0%}
+    50%{bottom: 9%}
+    100%{bottom: 10%}
+}

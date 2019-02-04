@@ -1,0 +1,127 @@
+.homeEightteenLow {
+    background: #fff;
+}
+
+.homeEightteenLow .textBackground {
+    color: #F0F2F7 !important;
+    top: 10% !important;
+}
+.jobContent{
+    width: 61.8%;
+    margin: 8em auto auto auto;
+}
+.jobContent>img.joblogo{
+    width: 40%;
+    margin-left: 30%;
+}
+.jobContent>ul{
+    margin-top: 20px;
+    list-style: none;
+    overflow: hidden;
+}
+.jobContent>ul>li{
+    width: 33.3333%;
+    padding-top: 0.6em;
+    float: left;
+    font-family: Avenir-Black;
+    font-weight: Black;
+    font-size: 2.4em;
+    color: #1D2026;
+}
+.jobContent>ul>li>a{
+    position: relative;
+    color: #1D2026;
+}
+.jobContent>ul>li>a>span{
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    left: 0;
+    bottom: 2px;
+    border-bottom: 10px solid #FF7815;
+}
+.jobContent>ul>li>a:hover span,.jobContent>ul>li.active>a>span{
+    width: 100%;
+    animation: redLineChange 0.5s;
+}
+.jobContent .withOurJobs{
+    padding: 20px 0 0 0;
+    text-align: right;
+    overflow: hidden;
+}
+.jobContent .withOurJobs p{
+    width: 260px;
+    float: right;
+}
+.jobContent .withOurJobs p span{
+    display: block;
+    text-align: left;
+}
+.withOurJobs p span:first-child{
+    font-family: CenturyGothic;
+    font-size: 2em;
+    color: #C5C7CB;
+}
+.withOurJobs p span:last-child{
+    font-family: Gotham-Bold;
+    font-size: 3em;
+    font-weight: bold;
+    color: #23252A;
+}
+/*职位详情模态*/
+.modal{
+    width: 61.8%;
+    min-width: 720px;
+    max-height: 720px;
+    overflow-y: auto;
+    opacity: 1;
+    display: none;
+    background: #fff;
+    box-shadow: 0 0 30px 3px rgba(204, 204, 204, 0.49);
+    margin: 0 auto;
+}
+.modal.active{
+    display: block;
+    animation: modalChange 0.75s;
+}
+@keyframes modalChange {
+    0%{opacity: 0;top: 20%}
+    100%{opacity: 1;top: 25%}
+}
+.modal .closeModal{
+    overflow: hidden;
+}
+.modal .closeModal>span{
+    float: right;
+    font-size: 3.2em;
+    cursor: pointer;
+    padding: 10px 15px 0 0;
+}
+.modal .closeModal>span:hover{
+    color: #FF5B00;
+}
+.modal>h3{
+    font-family: CenturyGothic-Bold;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #1D2026;
+    padding-left: 30px;
+}
+.modal-content{
+    padding: 0 30px 50px 30px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-content>p{
+    font-family: CenturyGothic;
+    font-size: 1.6em;
+    font-weight: Regular;
+    color: rgba(81, 81, 81, 0.75);
+    padding-top: 5px;
+}
+/*红色横线动画*/
+@keyframes redLineChange {
+    0%{width: 0;}
+    100%{width: 100%;}
+}

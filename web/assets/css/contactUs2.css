@@ -1,0 +1,96 @@
+.homeSixteenLow {
+    background: #fff;
+}
+
+.homeSixteenLow .textBackground {
+    color: #F0F2F7 !important;
+    top: 10% !important;
+}
+.contactsUsTwo{
+    padding-top: 10em;
+}
+.contactsUsTwo>div.contactTitle{
+    width: 76%;
+    margin: 0 auto;
+    font-family: CenturyGothic-Bold;
+    font-size: 3.8em;
+    font-weight: bold;
+    color: #1D2026;
+}
+.contactsUsTwo>div.contactContext{
+    width: 76%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contactsUsTwo>div.contactContext>p{
+    font-family: FuturaStd-Medium;
+    font-size: 2.4em;
+    font-weight: Medium;
+    color: #5D6476;
+}
+.contactsUsTwo>div.contactContext>p>a{
+    border-bottom: 4px solid #5D6476;
+    color: #5D6476;
+}
+.contactsUsTwo>div.contactContext>textarea,.contactsUsTwo>div.contactContext>input{
+    display: block;
+    text-decoration: none;
+    outline: none;
+    font-family: FuturaStd-Medium;
+    font-size: 2.2em;
+    font-weight: Medium;
+    color: #8D939F;
+    width: 50%;
+}
+.contactsUsTwo>div.contactContext>textarea{
+    border: 1px solid #C7CACF;
+    border-radius: 3px;
+    background: transparent !important;
+    resize: none;
+    padding: 10px;
+}
+.contactsUsTwo>div.contactContext>textarea.sendIdea{
+    margin-top: 2em;
+    height: 148px;
+}
+.contactsUsTwo>div.contactContext>input{
+    height: 44px;
+    line-height: 44px;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #C7CACF;
+    border-radius: 0px;
+    text-indent: 10px;
+}
+
+.contactsUsTwo>div.contactContext>textarea::-webkit-input-placeholder{color: #8D939F;}
+.contactsUsTwo>div.contactContext>textarea:-moz-placeholder{color: #8D939F;}
+.contactsUsTwo>div.contactContext>textarea::-moz-placeholder{color: #8D939F;}
+.contactsUsTwo>div.contactContext>input::-webkit-input-placeholder{color: #8D939F;}
+.contactsUsTwo>div.contactContext>input:-moz-placeholder{color: #8D939F;}
+.contactsUsTwo>div.contactContext>input::-moz-placeholder{color: #8D939F;}
+.contactsUsTwo>.contackSendBtn{
+    text-decoration: none;
+    outline: none;
+    width: 112px;
+    height: 112px;
+    line-height: 112px;
+    text-align: center;
+    font-family: CenturyGothic-Bold;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    background: #FF5B00;
+    border-radius: 50%;
+    margin-left: 40%;
+    margin-top: 1em;
+}
+.contactsUsTwo>.contackSendBtn:hover{
+    opacity: 0.8;
+    box-shadow: 0 20px 20px #f7a483;
+}
+.contactsUsTwo>.contackSendBtn:disabled{
+    opacity: 0.5;
+    color: #ccc;
+}

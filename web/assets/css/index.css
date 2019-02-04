@@ -1,0 +1,314 @@
+* {
+    border: none;
+    margin: 0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*cursor:url("./../images/light.png"),auto;*/
+}
+canvas {
+    background: white;
+    background: radial-gradient(#FFF, #DDD);
+    background: transparent;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: 0 0;
+    width: 100%;
+    height: 100%;
+}
+html{
+    background: #000;
+}
+/**分界线**/
+/*实现燥点效果关键CSS代码 */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: -webkit-radial-gradient(rgba(0,0,0,0),rgba(0,0,0,.4));
+    background-image: radial-gradient(rgba(0,0,0,0),rgba(0,0,0,.4));
+}
+/**分界线**/
+
+#do{
+    position: fixed;
+    z-index: 99;
+    bottom: 5%;
+    width: 64px;
+    height: 180px;
+    left:50%;
+    top:80%;
+    transform: translate(-50%, -80%);
+    -ms-transform: translate(-50%, -80%);
+    -webkit-transform: translate(-50%, -80%);
+}
+#do>div.dofloat{
+    position: absolute;
+    z-index: 2;
+    top: 75px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+#do>span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 15px;
+    border: 2px solid #fff;
+    top: 90px;
+}
+#do>div.dottedLine{
+    position: absolute;
+    top: 30px;
+    left: 32px;
+    width: 2px;
+    height: 60px;
+    background: -webkit-linear-gradient(bottom, #fff, #515151); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,  #fff , #515151); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,  #fff , #515151); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top,  #fff , #515151); /* 标准的语法（必须放在最后） */
+}
+#do>div.dottedLine>div{
+    width: 0px;
+    height: inherit;
+    border-right: 1px dotted #000;
+}
+
+#do:hover div.dofloat,#do:hover span.solid{
+    transform: rotate(360deg);
+    border-color: darkgreen;
+    animation: borderChange 1.5s;
+}
+#do:hover div.dottedLine{
+    background: -webkit-linear-gradient(bottom, #065106, rgba(2, 25, 4, 0.7)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,  #065106, rgba(2, 25, 4, 0.7)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,  #065106, rgba(2, 25, 4, 0.7)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top,  #065106, rgba(2, 25, 4, 0.7)); /* 标准的语法（必须放在最后） */
+}
+@keyframes borderChange {
+    0%{border: 2px dotted #fff;transform: rotate(0deg);}
+    100%{border: 2px solid darkgreen;transform: rotate(360deg);}
+}
+#do.active{
+    opacity: 0;
+    animation: doHide 1.5s;
+}
+@keyframes doHide {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+#do > a.toclick{
+    position: absolute;
+    bottom: 50px;
+    color: #fff;
+    width: inherit;
+    text-align: center;
+    opacity: 0;
+    font-weight: bold;
+}
+#do:hover a.toclick{
+    opacity: 1;
+    bottom: 15px;
+    animation: toClickShow 0.5s linear;
+}
+@keyframes toClickShow {
+    0%{bottom: 80px;opacity: 0;}
+    100%{bottom: 15px;opacity: 1;}
+}
+/*indeximg*/
+.indeximg{
+    position: absolute;
+    z-index: 80;
+    width: 247px;
+    height: 125px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: url("./../images/index.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*鼠标移动时高亮DIV*/
+#mouseMove{
+    position: fixed;
+    z-index: 1;
+    border-radius: 50%;
+    width: 720px;
+    height: 720px;
+    background: url("./../images/shadown.png") no-repeat;
+    background-size: 100% 100%;
+}
+#mouseMove.show{
+    opacity: 1;
+    animation: mouseMoveShow 0.25s linear;
+}
+#mouseMove.hide{
+    opacity: 0;
+    animation: mouseMoveHide 0.25s linear;
+}
+@keyframes mouseMoveShow {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+@keyframes mouseMoveHide {
+    from{opacity: 1}
+    to{opacity: 0}
+}
+.radar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.radar>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgba(58, 58, 58, 0.73);
+}
+.radar>div:nth-child(1){
+    width: 1920px;
+    height: 1920px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(2){
+    width: 1600px;
+    height: 1600px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(3){
+    width: 1440px;
+    height: 1440px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(4){
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(5){
+    width: 960px;
+    height: 960px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(6){
+    width: 920px;
+    height: 920px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(7){
+    width: 720px;
+    height: 720px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(8){
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+}
+.radar>div:nth-child(9){
+    width: 1200px;
+    height: 1200px;
+    margin-left: -600px;
+    margin-top: -600px;
+    transform: rotate(45deg) skew(0deg, 0deg);
+    /*animation: bigChildChange 8s linear infinite;*/
+}
+/*@keyframes bigChildChange {*/
+/*0%{transform: rotate(45deg) skew(0deg, 0deg);}*/
+/*25%{transform: rotate(45deg) skew(40deg, 40deg);}*/
+/*50%{transform: rotate(45deg) skew(60deg, 60deg);}*/
+/*75%{transform: rotate(45deg) skew(40deg, 40deg);}*/
+/*100%{transform: rotate(45deg) skew(0deg, 0deg);}*/
+/*}*/
+/*small*/
+.radar>div:nth-child(10){
+    width: 330px;
+    height: 330px;
+    margin-left: -165px;
+    margin-top: -165px;
+    transform: rotate(45deg);
+    animation: centerChildChange1 8s linear infinite;
+}
+.radar>div:nth-child(11){
+    width: 330px;
+    height: 330px;
+    margin-left: -165px;
+    margin-top: -165px;
+    transform: rotate(75deg);
+    animation: centerChildChange2 8s linear infinite;
+}
+.radar>div:nth-child(12){
+    width: 330px;
+    height: 330px;
+    margin-left: -165px;
+    margin-top: -165px;
+    transform: rotate(105deg);
+    animation: centerChildChange3 16s linear infinite;
+}
+.radar>div:nth-child(13){
+    width: 330px;
+    height: 330px;
+    margin-left: -165px;
+    margin-top: -165px;
+    transform: rotate(135deg);
+    animation: centerChildChange4 8s linear infinite;
+}
+@keyframes centerChildChange1 {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+@keyframes centerChildChange2 {
+    0%{transform: rotate(0deg) skew(0deg, 0deg);}
+    50%{transform: rotate(180deg) skew(40deg, 40deg);}
+    100%{transform: rotate(360deg) skew(0deg, 0deg);}
+}
+@keyframes centerChildChange3 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes centerChildChange4 {
+    0%{transform: rotate(0deg) skew(0deg, 0deg);}
+    50%{transform: rotate(180deg) skew(-40deg, -40deg);}
+    100%{transform: rotate(360deg) skew(0deg, 0deg);}
+}
+#scala.leftTop{
+    transform:skew(-3deg,-1deg);
+    animation: skewLeft 0.8s linear;
+}
+#scala.rightTop{
+    transform:skew(3deg,1deg);
+    animation: skewRight 0.8s linear;
+}
+#scala.leftBottom{
+    transform:skew(-3deg,-1deg);
+    animation: skewRight 0.8s linear;
+}
+#scala.rightBottom{
+    transform:skew(-3deg,-1deg);
+    animation: skewLeft 0.8s linear;
+}
+@keyframes skewLeft {
+    25%{transform:skew(0deg,0deg);}
+    75%{transform:skew(-3deg,-1deg);}
+}
+@keyframes skewRight {
+    25%{transform:skew(0deg,0deg);}
+    75%{transform:skew(3deg,1deg);}
+}

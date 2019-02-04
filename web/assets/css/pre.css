@@ -1,0 +1,160 @@
+.homeEvenLow {
+    background: #fff;
+}
+
+.homeEvenLow .textBackground {
+    color: #F0F2F7 !important;
+}
+
+.preTexts {
+    width: 86%;
+    margin: 0 auto;
+}
+
+.preTexts .preTitle {
+    font-family: CenturyGothic-Bold;
+    font-size: 2.8em;
+    color: #1D2026;
+    font-weight: bold;
+    line-height: 1;
+    margin: 5em 0 1em 0;
+}
+
+.preTexts .preDetail {
+    overflow: hidden;
+    min-height: 132px;
+}
+.preTexts .preDetail div {
+    float: left;
+    width: 50%;
+}
+.preTexts .preDetail div:first-child {
+    font-family: CenturyGothic-Bold;
+    font-size: 2.4em;
+    color: #292B30;
+    font-weight: bold;
+    overflow: hidden;
+    animation: detailDivOneChange 1.5s;
+}
+
+.preTexts .preDetail div:last-child {
+    font-family: CenturyGothic;
+    font-size: 2.2em;
+    color: #6c778e;
+    font-weight: Regular;
+    overflow: hidden;
+    animation: detailDivTwoChange 1.5s;
+}
+@keyframes detailDivOneChange {
+    0%{max-height: 0px}
+    50%{max-height: 150px}
+    100%{max-height: 150px}
+}
+@keyframes detailDivTwoChange {
+    0%{max-height: 0px}
+    50%{max-height: 0px}
+    100%{max-height: 150px}
+}
+
+.preAboutUs {
+    width: 80%;
+    margin: 2em auto 0 auto;
+}
+
+.preAboutUs ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.preAboutUs ul li {
+    float: left;
+    width: 33.3333%;
+    height: 10em;
+    line-height: 10em;
+}
+
+.preAboutUs ul li > label, .preAboutUs ul li > span.line, .preAboutUs ul li > a {
+    vertical-align: middle;
+}
+
+.preAboutUs ul li > label {
+    font-family: Gotham-Bold;
+    font-size: 2.4em;
+    color: #C5C7CB;
+    font-weight: bold;
+    display: inline-block;
+    width: 30px;
+    cursor: pointer;
+}
+
+.preAboutUs ul li > span.line {
+    display: inline-block;
+    width: 45px;
+    border: 1px solid #C3C4CA;
+    margin: auto 2em;
+}
+
+.preAboutUs ul li > a {
+    position: relative;
+    font-family: Gotham-Bold;
+    font-size: 2.4em;
+    color: #23252A;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    width: 220px;
+    height: 100%;
+    text-align: center;
+}
+
+.preAboutUs ul li > a:hover {
+    color: red;
+}
+.preAboutUs ul li > a label,.preAboutUs ul li > a span{
+    position: absolute;
+}
+.preAboutUs ul li > a label{
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.preAboutUs ul li > a span{
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: hidden;
+}
+.preAboutUs ul li.pre-gamehub > a span{
+    background: url("../images/pre/pimg3.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+.preAboutUs ul li.pre-iFunnyhub > a span{
+    background: url("../images/pre/pimg1.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+.preAboutUs ul li.pre-pleasureClip > a span{
+    background: url("../images/pre/pimg2.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+.preAboutUs ul li.pre-animehub > a span{
+    background: url("../images/pre/pimg4.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+.preAboutUs ul li.pre-applications > a span{
+    background: url("../images/pre/pimg5.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+.preAboutUs ul li > a:hover span{
+    visibility: visible;
+    animation: preHoverChange 1s;
+}
+@keyframes preHoverChange {
+    0% {background-size: 0% 0%}
+    100% {background-size: 100% 100%}
+}

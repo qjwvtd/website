@@ -1,0 +1,400 @@
+.clawinLow {
+    background: #fff;
+}
+.clawinLow>.textBackground{
+    color: #F0F2F7 !important;
+    top: 30%;
+    text-align: center;
+}
+/*#################################clawin1的css 华丽的分界线#############################*/
+.clawin1 .ui-layer-low{
+    background: url("./../images/clawin/clawin1bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.clawinContent{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.clawinOneText,.clawinOneImg{
+    height: 100%;
+    position: absolute;
+}
+.clawinOneText{
+    width: 50%;
+    z-index: 2;
+}
+.clawinOneText>section{
+    position: absolute;
+    min-width: 540px;
+    max-width: 600px;
+    height: 182px;
+    top: -160px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.clawinOneText>section>h3{
+    font-family:CenturyGothic-Bold;
+    font-weight: bold;
+    color: #27292F;
+    font-size: 4em;
+    line-height: 1;
+}
+.clawinOneText>section>p{
+    margin-top: 15px;
+    font-family:CenturyGothic-Bold;
+    font-weight: bold;
+    color: #27292F;
+    font-size: 2.4em;
+}
+.clawinOneText>section>a{
+    display: block;
+    color: #1D2026;
+    width: 160px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    font-size: 2.2em;
+    border-radius: 30px;
+    background: #ffdb56;
+    box-shadow: 5px 5px 10px #ffc550;
+    margin-left: 10%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.clawinOneText>section>a:hover{
+    color: #fff;
+    box-shadow: 5px 5px 10px #ffaf4a;
+}
+.clawinOneImg{
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+.clawinOneImg>span,.clawinOneImg>div{
+    position: absolute;
+}
+.clawinOneImg>div{
+    z-index: 1;
+    bottom: 0;
+    right: 20.8%;
+    border: 1px solid #f8f8f8;
+    right: 31%;
+    bottom: 5%;
+    width: 21%;
+    height: 90%;
+    max-width: 441px;
+    max-height: 1021px;
+    border-radius: 40px;
+    background: url("./../images/clawin/mobile.jpg") no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(20deg);
+    box-shadow: 20px 20px 20px #ccc;
+    transform: perspective(500px) rotate3D(3, 1, 1, 10deg) rotate(20deg);
+    animation: clawinPhoneChange 6s linear infinite;
+}
+/*.clawinOneImg>div:hover{*/
+    /*animation: clawinPhoneChange 6s linear infinite;*/
+/*}*/
+@keyframes clawinPhoneChange {
+    0%{transform: perspective(1000px) rotate3D(1, 1, 1, 10deg) rotate(20deg);}
+    25%{transform: perspective(500px) rotate3D(3, 1, 1, 10deg) rotate(20deg);}
+    50%{transform: perspective(1000px) rotate3D(1, 1, 1, 10deg) rotate(20deg);}
+    75%{transform: perspective(500px) rotate3D(1, 3, 1, 10deg) rotate(20deg);}
+    100%{transform: perspective(1000px) rotate3D(1, 1, 1, 10deg) rotate(20deg);}
+}
+.clawinOneImg span{
+    z-index: 2;
+}
+.clawinOneImg span.tongs{
+    top: 0;
+    right: 7.5%;
+    width: 21.7%;
+    height: 41.9%;
+    max-width: 417px;
+    max-height: 453px;
+    background: url("./../images/clawin/cimg4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.clawinOneImg span.friendLeft{
+    left: 0;
+    bottom: 6.5%;
+    width: 11.7%;
+    height: 34.3%;
+    max-width: 225px;
+    max-height: 371px;
+    background: url("./../images/clawin/cimg1.png") no-repeat;
+    background-size: 100% 100%;
+    animation: friendLeftImgChange 1s linear;
+}
+@keyframes friendLeftImgChange {
+    0%{left:-225px;}
+    10%{left:-100px;}
+    90%{left:-100px;}
+    100%{left: 0;}
+}
+.clawinOneImg span.friendRight{
+    right:12.9%;
+    bottom: 16.6%;
+    width: 12.7%;
+    height: 38.4%;
+    max-width: 263px;
+    max-height: 415px;
+    background: url("./../images/clawin/cimg2.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*#################################clawin2的css 华丽的分界线#############################*/
+#clawin2Content.ui-content{
+    background: url("./../images/clawin/cimgzpbg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.clawinTwoContent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.clawinTwoContent .clawinTwoContentLeft,.clawinTwoContent .clawinTwoContentRight{
+    box-sizing: border-box !important;
+    float: left;
+    width: 50%;
+}
+.clawinTwoContentRight > div{
+    margin-top: 25%;
+}
+.clawinTwoContentRight > div > h3{
+    font-family: AvantGardeLT-Medium;
+    color: #ECF2FF;
+    font-weight: bold;
+    font-size: 3em;
+}
+.clawinTwoContentRight > div > p{
+    font-family:CenturyGothic;
+    color: #FEFEFE;
+    font-weight: bold;
+    font-size: 2.4em;
+}
+.lottery{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 30px solid #e43de6;
+    margin: 16% auto auto 40%;
+}
+.lotteryTip{
+    position: absolute;
+    z-index: 2;
+    /*width: 152px;*/
+    /*height: 105px;*/
+    width: 0px;
+    height: 0px;
+    top: -120px;
+    left: 150px;
+    background: url("./../images/clawin/cimg8.png") no-repeat;
+    background-size: 100% 100%;
+}
+.lotteryTip.active{
+    width: 152px;
+    height: 105px;
+    animation: lotteryTipAnimate 0.25s linear;
+}
+@keyframes lotteryTipAnimate {
+    0%{width: 0px;height: 0px;top: -15px}
+    100%{width: 152px;height: 105px;top: -120px}
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #ff5555;
+    border-radius: 50%;
+}
+.light {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transform-origin: 50px 150px;
+    background: #fff !important;
+    box-shadow: 0 0 15px 2px yellow;
+}
+.light-twinkling {
+    animation: 1s twinkling 3, 100ms 3s twinkling 3;
+}
+.light:nth-child(2n) {
+    background-color: #fafce7;
+}
+.light:nth-child(2n+1) {
+    background-color: #ffe58b;
+}
+.light:nth-child(1) {
+    transform: rotate(0deg);
+    top: -25px;
+    left: 160px;
+}
+.light:nth-child(2) {
+    transform: rotate(60deg);
+    top: 31px;
+    left: 177px;
+}
+.light:nth-child(3) {
+    transform: rotate(120deg);
+    top: 76px;
+    left: 142px;
+}
+.light:nth-child(4) {
+    transform: rotate(180deg);
+    top: 65px;
+    left: 80px;
+}
+.light:nth-child(5) {
+    transform: rotate(240deg);
+    top: 10px;
+    left: 60px;
+}
+.light:nth-child(6) {
+    transform: rotate(300deg);
+    top: -35px;
+    left: 98px;
+}
+.lotteryContent {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: url("./../images/clawin/zp.png") no-repeat;
+    background-size: 100% 100%;
+}
+.lotteryContent.active{
+    animation: lotteryChangeFour 3s linear;
+}
+@keyframes lotteryChangeTwo {
+    0%{transform: rotate(720deg)}
+    100%{transform: rotate(0deg)}
+}
+@keyframes lotteryChangeFour {
+    0%{transform: rotate(1080deg)}
+    100%{transform: rotate(0deg)}
+}
+.pointer {
+    border: 1px solid transparent;
+    position: absolute;
+    left: 140px;
+    top: 140px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background: url("./../images/clawin/cimgPointer.png") no-repeat center -14px;
+    background-size: 50% 99%;
+    transition: transform 3s cubic-bezier(.2,.93,.43,1);
+    cursor: pointer;
+}
+.pointer::after {
+    content: '';
+}
+@keyframes twinkling {
+    25% { background: #e43de6; }
+    50% { background: yellow; }
+    75% { background: #e43de6; }
+}
+/*#################################clawin3的css 华丽的分界线#############################*/
+.clawinFriends{
+    height: 100%;
+}
+.clawinFriends>div{
+    float: left;
+    height: 100%;
+}
+.clawinFriends>div.clawinFriendsLeft,.clawinFriends>div.clawinFriendsRight{
+    width: 10%;
+    text-align: center;
+}
+.clawinFriends>div.clawinFriendsLeft>div,.clawinFriends>div.clawinFriendsRight>div{
+    position: relative;
+    height: 100%;
+}
+.clawinFriends>div.clawinFriendsLeft>div>a,.clawinFriends>div.clawinFriendsRight>div>a{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid rgba(204, 204, 204, 0.31);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.clawinFriends>div.clawinFriendsLeft>div>a{
+    background: url("./../images/left.png") no-repeat center center;
+}
+.clawinFriends>div.clawinFriendsRight>div>a{
+    background: url("./../images/right.png") no-repeat center center;
+}
+.clawinFriends>div>div:hover a{
+    box-shadow: 0 10px 25px #ccc;
+}
+.clawinFriends>div.clawinFriendsItem{
+    width: 80%;
+    height: 100%;
+}
+.clawinFriendsItem>div{
+    position: absolute;
+}
+.clawinFriendsItem>div.friendsText{
+    z-index: 2;
+    width: 75%;
+    margin-left: 12.5%;
+    text-align: left;
+    margin-top: 10%;
+}
+.clawinFriendsItem>div.friendsImgs{
+    z-index: 1;
+    height: 80%;
+    width: 50%;
+    margin: 3% auto auto 25%;
+    text-align: center;
+}
+.clawinFriendsItem>div.friendsImgs img{
+    height: 100%;
+    animation: friendsImgChange 1s linear;
+}
+.friendsText>h3{
+    font-family: Multicolore;
+    font-size: 6em;
+    font-weight: Regular;
+    color: #292B30;
+    animation: friendsTextChange1 0.75s;
+}
+.friendsText>p{
+    font-family: CenturyGothic;
+    font-size: 2.2em;
+    font-weight: Regular;
+    color: #7d7d7d;
+    animation: friendsTextChange2 1s;
+}
+/*图片动画*/
+@keyframes friendsImgChange {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+/*文字动画*/
+@keyframes friendsTextChange1 {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+@keyframes friendsTextChange2 {
+    0%{padding-left: 100px;opacity: 0}
+    100%{padding-left: 0;opacity: 1}
+}
+.clawinTwoTitle{
+    font-family: CenturyGothic-Bold;
+    position: absolute;
+    width: 50%;
+    z-index: 2;
+    bottom: 40px;
+    left: 25%;
+    font-size: 4.2em;
+    font-weight: bold;
+    color: #292B30;
+    text-align: center;
+}

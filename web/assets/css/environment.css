@@ -1,0 +1,18 @@
+/*修改库psv样式*/
+/*.psv-zoom-button,.psv-fullscreen-button,.psv-download-button,.psv-markers-button{*/
+    /*display: none !important;*/
+/*}*/
+#company{
+    height: 100%;
+    background: url("./../images/joinUs/env.png") no-repeat;
+    background-size: 100% 100%;
+}
+#company>h3{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10%;
+    font-family: CenturyGothic-Bold;
+    font-size: 5.8em;
+    font-weight: bold;
+}
